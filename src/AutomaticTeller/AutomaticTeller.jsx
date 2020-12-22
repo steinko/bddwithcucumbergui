@@ -1,5 +1,6 @@
 import React from 'react';
 import {Component} from 'react';
+import {withdraw} from '../WithdrawalService/WithdrawalService';
 
 export default class AutomaticTeller extends Component{
 	
@@ -15,7 +16,9 @@ export default class AutomaticTeller extends Component{
                     }
 
                     handleSubmit(event){
-                          event.preventDefault()	
+	                      withdraw(this.state.amount)
+                          event.preventDefault()
+	
                     }
 
 	                render() {return ( <div>
